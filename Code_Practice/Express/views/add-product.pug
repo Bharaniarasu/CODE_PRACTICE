@@ -1,0 +1,13 @@
+extends layouts/main.pug
+block title
+    title add-product
+block Content
+      main
+        form(action="/admin/store" method="POST")
+          label Product Name : 
+          input(type="text" name="Product_Name" )
+          label(style="margin-left:1rem") Quantity : 
+          input(type="number" name="Qty") 
+          br
+          input(type="Submit" value="Submit" style="margin-top:3rem") 
+     

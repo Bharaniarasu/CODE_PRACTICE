@@ -1,0 +1,12 @@
+<%-include('ejsLayouts/header.ejs')%>
+
+<main>
+  <form action="/admin/store" method="POST">
+    <label>Product Name : </label>
+
+    <input type="text" name="Product_Name" />
+    <label>Quantity : </label>
+    <input type="number" name="Qty" />
+    <input type="Submit" value="Submit" />
+  </form>
+</main>

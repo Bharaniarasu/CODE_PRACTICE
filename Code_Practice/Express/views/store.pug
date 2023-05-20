@@ -1,0 +1,17 @@
+extends layouts/main.pug
+block title
+    title Store
+block Content
+      main
+        h2(style="text-align: center;margin-bottom: 3rem") Product Details Submitted.....
+         table(style="text-align: center;margin:auto;padding:1rem")
+          tr
+            th Product Name
+            th 
+            th Quantity      
+          tr
+            td #{product.req.body.Product_Name}
+            td
+            td #{product.req.body.Qty}
+          
+ 

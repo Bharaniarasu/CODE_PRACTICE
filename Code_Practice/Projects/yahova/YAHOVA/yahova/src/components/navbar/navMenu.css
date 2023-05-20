@@ -1,0 +1,85 @@
+.nav-head {
+  color: #fc7613;
+  font-size: 1.4rem;
+  position: relative;
+  display: inline-block;
+  top: 1.3rem;
+}
+.nav-head Link{
+  color: #fc7613;
+
+}
+.nav-logo {
+  width: 8rem;
+  height: 8rem;
+  position: relative;
+  display: inline-block;
+  /* top: -1.3rem; */
+}
+.head {
+  height: 3rem;
+
+  width: 40rem;
+}
+.head-mini {
+  display: none;
+}
+.nav-head-title h1 {
+  color: #fc7613;
+  margin-bottom: 0;
+  margin-top: 0;
+  display: inline-block;
+  font-size: 2.5rem;
+}
+.nav-head-title {
+  display: inline-block;
+  font-family: "Magmawave Caps", sans-serif;
+  position: relative;
+    /* top: -1rem; */
+}
+.nav-head-link {
+  cursor: pointer;
+  z-index: 9999;
+}
+.nav-head p {
+  margin: 0 1px;
+  font-size: 0.8rem;
+  display: block;
+  font-family: "Cabin", sans-serif;
+
+  color: #622e2a;
+}
+
+@media only screen and (max-width: 960px) {
+  .nav-head {
+   
+    margin: 20px;
+  }
+  .nav-head-span {
+    display: none;
+  }
+
+  .nav-head p {
+    display: none;
+  }
+  .nav-head-traders {
+    display: block;
+    font-size: 12px;
+    color: #3498db;
+    position: relative;
+    left: 7rem;
+    top: -5px;
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .head {
+    height: 3rem;
+    display: none;
+    width: 40rem;
+  }
+  .head-mini {
+    display: inline;
+    width: 11rem;
+    height: 2rem;
+  }
+}

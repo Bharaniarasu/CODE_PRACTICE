@@ -1,0 +1,23 @@
+img {
+}
+:root {
+  scrollbar-face-color: #fc7613; /* Firefox 63 compatibility */
+  scrollbar-track-color: rgb(81, 82, 82); /* Firefox 63 compatibility */
+  scrollbar-color: #fc7613 rgb(81, 82, 82);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgb(81, 82, 82);
+}
+::-webkit-scrollbar-thumb {
+  background-color: #fc7613;
+  // border-radius: 10px;
+}
+::selection {
+  background-color: #fc7613;
+  color: white;
+}

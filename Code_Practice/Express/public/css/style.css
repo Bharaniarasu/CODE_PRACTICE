@@ -1,0 +1,26 @@
+ nav{
+    background: purple;
+}
+ ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+ul li{
+    padding: 10px;
+}
+ ul li a{
+    color:white;
+    font-weight: bold;
+    text-decoration: none;
+}
+ ul li a:hover{
+    color:yellow;
+}
+main{
+    text-align: center;
+}
+.active{
+    color:yellow;
+}

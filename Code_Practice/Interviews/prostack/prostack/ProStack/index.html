@@ -1,0 +1,810 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <title>crud dashboard</title>
+    <!----css---->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <!--google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!--google material icon-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="body-overlay"></div>
+      <!-------------------------sidebar------------>
+      <!-- Sidebar  -->
+      <nav id="sidebar">
+        <div class="sidebar-header">
+          <h3><img src="./assets/logo.png" /><span>Centilio</span></h3>
+        </div>
+
+        <ul>
+          <li class="active">
+            <a href="#"
+              ><i class="material-icons">home</i>
+              <span style="color: grey">Dashboards</span></a
+            >
+          </li>
+          <h4 style="padding: 0 10px">pages</h4>
+          <li class="dropdown">
+            <a>
+              <i class="material-icons">group</i>Users
+              <i class="material-icons expand_icon">expand_more</i>
+            </a>
+            <ul class="">
+              <li>
+                <a href="#">User 1</a>
+              </li>
+              <li>
+                <a href="#">User 2</a>
+              </li>
+              <li>
+                <a href="#">User 3</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a>
+              <i class="material-icons">person</i
+              ><span
+                >User Profiles<i class="material-icons expand_icon"
+                  >expand_more</i
+                ></span
+              ></a
+            >
+            <ul>
+              <li>
+                <a href="#">Page 1</a>
+              </li>
+              <li>
+                <a href="#">Page 2</a>
+              </li>
+              <li>
+                <a href="#">Page 3</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a>
+              <i class="material-icons">remember_me </i>
+
+              <span>Account</span
+              ><i class="material-icons expand_icon">expand_more</i></a
+            >
+            <ul>
+              <li>
+                <a href="#">Settings</a>
+              </li>
+              <li>
+                <a href="#">Billing</a>
+              </li>
+              <li>
+                <a href="#">Invoice</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a>
+              <i class="material-icons">shopping_cart</i><span>E-Commerce</span
+              ><i class="material-icons expand_icon">expand_more</i></a
+            >
+            <ul>
+              <li>
+                <a href="#">Page 1</a>
+              </li>
+              <li>
+                <a href="#">Page 2</a>
+              </li>
+              <li>
+                <a href="#">Page 3</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a>
+              <i class="material-icons">library_books</i><span>Projects</span
+              ><i class="material-icons expand_icon">expand_more</i></a
+            >
+            <ul>
+              <li>
+                <a href="#">Page 1</a>
+              </li>
+              <li>
+                <a href="#">Page 2</a>
+              </li>
+              <li>
+                <a href="#">Page 3</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a>
+              <i class="material-icons">work</i><span>Project</span
+              ><i class="material-icons expand_icon">expand_more</i></a
+            >
+            <ul>
+              <li>
+                <a href="#">Page 1</a>
+              </li>
+              <li>
+                <a href="#">Page 2</a>
+              </li>
+              <li>
+                <a href="#">Page 3</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <a>
+              <i class="material-icons">lock</i><span>Authentication</span
+              ><i class="material-icons expand_icon">expand_more</i></a
+            >
+            <ul>
+              <li>
+                <a href="#">Page 1</a>
+              </li>
+              <li>
+                <a href="#">Page 2</a>
+              </li>
+              <li>
+                <a href="#">Page 3</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="">
+            <a href="#"
+              ><i class="material-icons">key</i><span>API Keys</span></a
+            >
+          </li>
+
+          <li class="">
+            <a href="#"
+              ><i class="material-icons">visibility</i
+              ><span>Welcome Page </span></a
+            >
+          </li>
+          <li class="">
+            <a href="#"
+              ><i class="material-icons">insert_chart</i><span>Kanban</span></a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!--------page-content---------------->
+      <div id="content">
+        <!--top--navbar----design--------->
+        <div class="top-navbar">
+          <div
+            class="xp-topbar"
+            style="border-bottom: 2px solid #e3e0e0; padding-bottom: 5px"
+          >
+            <!-- Start XP Row -->
+            <div class="row" style="justify-content: space-between">
+              <!-- Start XP Col -->
+              <div class="nav_search">
+                <div>
+                  <div class="xp-menubar">
+                    <span class="material-icons">signal_cellular_alt </span>
+                  </div>
+                </div>
+                <!-- End XP Col -->
+
+                <!-- Start XP Col -->
+                <div>
+                  <div class="xp-searchbar">
+                    <form>
+                      <div class="input-group">
+                        <input
+                          type="search"
+                          class="form-control"
+                          placeholder="Search in Front"
+                        />
+                        <div class="input-group-append">
+                          <button class="btn" type="submit" id="button-addon2">
+                            <i class="material-icons">search</i>
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <!-- End XP Col -->
+
+              <!-- Start XP Col -->
+              <div>
+                <div class="profilebar">
+                  <nav class="navbar">
+                    <ul class="nav navbar-nav">
+                      <li
+                        class="dropdown nav-item active"
+                        id="notification"
+                        onclick="showNotification()"
+                      >
+                        <a href="#" class="nav-link">
+                          <span class="material-icons">notifications</span>
+                          <span class="notification"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a href="#">You have 5 new messages</a>
+                          </li>
+                          <li>
+                            <a href="#">You're now friend with Mike</a>
+                          </li>
+                          <li>
+                            <a href="#">Wish Mary on her birthday!</a>
+                          </li>
+                          <li>
+                            <a href="#">5 warnings in Server Console</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          <span class="material-icons">question_answer</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">
+                          <span class="material-icons">token</span>
+                        </a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" data-toggle="dropdown">
+                          <img
+                            src="./assets/user.jpg"
+                            style="width: 40px; border-radius: 50%"
+                          />
+                          <span class="xp-user-live"></span>
+                        </a>
+                        <ul class="dropdown-menu small-menu">
+                          <li>
+                            <a href="#">
+                              <span class="material-icons">
+                                person_outline </span
+                              >Profile
+                            </a>
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><span class="material-icons"> settings </span
+                              >Settings</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><span class="material-icons"> logout</span
+                              >Logout</a
+                            >
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <!-- End XP Col -->
+            </div>
+            <!-- End XP Row -->
+          </div>
+          <div
+            class="xp-breadcrumbbar"
+            style="
+              border-bottom: 2px solid #e9e4e4;
+              padding-bottom: 5px;
+              padding: 10px;
+            "
+          >
+            <div class="user_count">
+              <div class="count">
+                <h3>Customers</h3>
+                <button
+                  disabled
+                  class="btn"
+                  style="color: black; font-weight: 800; font-size: larger"
+                  id="customerCount"
+                >
+                  0
+                </button>
+              </div>
+              <div
+                class="add_customer"
+                style="display: flex; align-items: center"
+              >
+                <a
+                  href="#addEmployeeModal"
+                  class="btn add-btn"
+                  onclick="showAddModal()"
+                >
+                  <span>Add Customers</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--------main-content------------->
+
+        <div class="main-content">
+          <div class="row">
+            <div style="width: 100%">
+              <div class="table-wrapper">
+                <div class="table-title">
+                  <div class="user_count">
+                    <div class="">
+                      <form>
+                        <div class="input-group">
+                          <div class="input-group-append">
+                            <button
+                              class="btn"
+                              type="submit"
+                              id="button-addon2"
+                              style="
+                                border: none;
+                                padding: 8px;
+                                background: none;
+                              "
+                            >
+                              <i class="material-icons">search</i>
+                            </button>
+                          </div>
+                          <input
+                            type="search"
+                            class="form-control"
+                            placeholder="Search orders"
+                            id="myInput"
+                            onkeyup="onSearch()"
+                          />
+                        </div>
+                      </form>
+                    </div>
+                    <div class="">
+                      <a
+                        href="#deleteEmployeeModal"
+                        class="btn danger"
+                        onClick="showDeleteModal()"
+                      >
+                        <i
+                          class="material-icons danger-icon"
+                          style="transform: translate(0px, 5px)"
+                          >delete</i
+                        >
+                        <span>Delete</span></a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div style="overflow-x: auto">
+                  <table
+                    class="table table-striped"
+                    style="border-collapse: collapse; width: 100%"
+                    id="listTable"
+                  >
+                    <thead>
+                      <tr style="text-transform: uppercase">
+                        <th></th>
+                        <th>Name</th>
+                        <th>E-mail</th>
+                        <th>Phone</th>
+                        <th>counrty</th>
+                        <th>account status</th>
+                        <th>orders</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody style="font-size: 10px">
+                      <tr>
+                        <td>
+                          <span class="custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="checkbox"
+                              id="checkbox1"
+                            />
+                            <label for="checkbox1"></label>
+                          </span>
+                        </td>
+                        <td>
+                          <img
+                            src="./assets/user_1.png"
+                            class="user_img"
+                          /><span>Amanda Harvey</span>
+                        </td>
+                        <td>amanda@site.com</td>
+                        <td>+1-202-505-0140</td>
+                        <td>United Kingdom</td>
+
+                        <td><span class="status"></span>Active</td>
+                        <td>3</td>
+                        <td>
+                          <a
+                            href="#editEmployeeModal"
+                            class="edit"
+                            onClick="onEdit(this)"
+                          >
+                            <i
+                              class="material-icons"
+                              data-toggle="tooltip"
+                              title="Edit"
+                              ></i
+                            ></a
+                          >
+                          <a
+                            href="#deleteEmployeeModal"
+                            class="delete"
+                            onClick="onDelete(this)"
+                          >
+                            <i class="material-icons" title="Delete"></i></a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="checkbox"
+                              id="checkbox2"
+                            />
+                            <label for="checkbox2"></label>
+                          </span>
+                        </td>
+                        <td>
+                          <span
+                            id="profileImage"
+                            style="color: rgb(110, 110, 235)"
+                            >A</span
+                          ><span class="fullName">Anne Richard</span>
+                        </td>
+                        <td>anne@site.com</td>
+                        <td>+1-752-235-2353</td>
+                        <td>United States</td>
+                        <td><span class="status_red"></span>Disabled</td>
+                        <td>1</td>
+
+                        <td>
+                          <a
+                            href="#editEmployeeModal"
+                            class="edit"
+                            onClick="onEdit(this)"
+                          >
+                            <i class="material-icons" title="Edit"></i></a
+                          >
+                          <a
+                            href="#deleteEmployeeModal"
+                            class="delete"
+                            onClick="onDelete(this)"
+                          >
+                            <i class="material-icons" title="Delete"></i></a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="checkbox"
+                              id="checkbox3"
+                            />
+                            <label for="checkbox3"></label>
+                          </span>
+                        </td>
+                        <td>
+                          <span
+                            id="profileImage"
+                            style="color: rgb(82, 38, 49); background: #c5c5c5"
+                            >B</span
+                          ><span class="fullName">Bob Dean</span>
+                        </td>
+
+                        <td>bob@site.com</td>
+                        <td>+1-854-235-9755</td>
+                        <td>Austria</td>
+                        <td><span class="status_red"></span>Disabled</td>
+                        <td>8</td>
+                        <td>
+                          <a
+                            href="#editEmployeeModal"
+                            class="edit"
+                            onClick="onEdit(this)"
+                          >
+                            <i class="material-icons" title="Edit"></i></a
+                          >
+                          <a
+                            href="#deleteEmployeeModal"
+                            class="delete"
+                            onClick="onDelete(this)"
+                          >
+                            <i class="material-icons" title="Delete"></i></a
+                          >
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span class="custom-checkbox">
+                            <input
+                              type="checkbox"
+                              class="checkbox"
+                              id="checkbox4"
+                            />
+                            <label for="checkbox4"></label>
+                          </span>
+                        </td>
+                        <td>
+                          <span
+                            id="profileImage"
+                            style="color: rgb(38, 122, 59)"
+                            >B</span
+                          ><span class="fullName">Brian Halligan</span>
+                        </td>
+
+                        <td>Brian@site.com</td>
+                        <td>+1-141-463-1512</td>
+                        <td>France</td>
+                        <td><span class="status"></span>Active</td>
+                        <td>1</td>
+                        <td>
+                          <a
+                            href="#editEmployeeModal"
+                            class="edit"
+                            onClick="onEdit(this)"
+                          >
+                            <i class="material-icons" title="Edit"></i></a
+                          >
+                          <a
+                            href="#deleteEmployeeModal"
+                            class="delete"
+                            onClick="onDelete(this)"
+                          >
+                            <i class="material-icons" title="Delete"></i></a
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="">
+                <div class="hint-text">
+                  Showing <b>5</b> out of <b>25</b> entries
+                </div>
+                <ul class="pagination">
+                  <li class="page-item"><a href="#">Previous</a></li>
+                  <li>
+                    <a href="#" class="page-link">1</a>
+                  </li>
+                  <li>
+                    <a href="#" class="page-link">2</a>
+                  </li>
+                  <li class="= active">
+                    <a href="#" class="page-link">3</a>
+                  </li>
+                  <li>
+                    <a href="#" class="page-link">4</a>
+                  </li>
+                  <li>
+                    <a href="#" class="page-link">5</a>
+                  </li>
+                  <li>
+                    <a href="#" class="page-link">Next</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Add/Edit Modal HTML -->
+          <div id="addEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <form>
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="form_header">Add Customer</h4>
+                    <button
+                      type="button"
+                      class="close"
+                      onclick="closeAddModal()"
+                    >
+                      ×
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="form-group">
+                      <label>Name</label
+                      ><small
+                        class="validation-error hide"
+                        id="nameValidateError"
+                        >*This field is required*</small
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="uName"
+                        id="uName"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Email</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        name="mail"
+                        id="mail"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Phone</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="phone"
+                        id="phone"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Country</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        name="country"
+                        id="country"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label>Account Status</label>
+                      <select
+                        type="text"
+                        class="form-control"
+                        name="status"
+                        id="status"
+                      >
+                        <option></option>
+                        <option>Active</option>
+                        <option>Disabled</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label>Orders</label>
+                      <input
+                        type="number"
+                        class="form-control"
+                        name="orders"
+                        id="orders"
+                      />
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <input
+                      type="button"
+                      class="btn btn-warning"
+                      value="Cancel"
+                      onclick="closeAddModal()"
+                    />
+                    <input
+                      type="submit"
+                      class="btn btn-success"
+                      value="Add"
+                      onclick="event.preventDefault();onFormSubmit()"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+
+          <!-- Delete Modal HTML -->
+          <div id="deleteEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <form>
+                  <div class="modal-header">
+                    <h4 class="modal-title">Delete Employee</h4>
+                    <button
+                      type="button"
+                      class="close"
+                      data-dismiss="modal"
+                      aria-hidden="true"
+                      onClick="closeDeleteModal()"
+                    >
+                      ×
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>Are you sure you want to delete these Records?</p>
+                    <p class="text-warning">
+                      <small>This action cannot be undone.</small>
+                    </p>
+                  </div>
+                  <div class="modal-footer">
+                    <input
+                      type="button"
+                      class="btn btn-warning"
+                      data-dismiss="modal"
+                      value="Cancel"
+                      onClick="closeDeleteModal()"
+                    />
+                    <input
+                      type="submit"
+                      class="btn"
+                      value="Delete"
+                      style="background: red"
+                      id="delete"
+                    />
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!---footer---->
+      </div>
+    </div>
+
+    <!----------html code compleate----------->
+
+    <!-- Optional JavaScript -->
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/index.js"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $(".xp-menubar").on("click", function () {
+          $("#sidebar").toggleClass("active");
+          $("#content").toggleClass("active");
+        });
+
+        $(".xp-menubar,.body-overlay").on("click", function () {
+          $("#sidebar,.body-overlay").toggleClass("show-nav");
+        });
+
+        // $("#notification").click(function () {
+        //   $(".show_notification").toggleClass("show_dropdown");
+        // });
+
+        $(".dropdown").click(function () {
+          $(".show_dropdown").toggleClass("show_dropdown");
+          var nextSibling = $(this).children();
+          nextSibling.toggleClass("show_dropdown");
+        });
+        var tableRef = document.getElementById("listTable");
+        var tableRows = tableRef.rows;
+        var userCount = tableRows.length - 1;
+
+        document.getElementById("customerCount").innerHTML = userCount;
+      });
+    </script>
+  </body>
+  <footer class="footer">
+    <div class="">
+      <div class="footer-in">
+        <p class="mb-0">© 2023 Centilo design - All Rights Reserved.</p>
+      </div>
+    </div>
+  </footer>
+</html>

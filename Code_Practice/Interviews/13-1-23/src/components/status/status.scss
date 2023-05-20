@@ -1,0 +1,17 @@
+.tabs{
+  .slds-tabs_default__link{
+      color: #797979;
+  }
+  .slds-tabs_default__nav{
+    .slds-is-active{
+      &:after{
+        background-color: #fb7420;
+        height: 2px;
+      }
+      .slds-tabs_default__link{
+        color: #fb7420;
+        font-weight: 400;
+      }
+    }
+  }
+}

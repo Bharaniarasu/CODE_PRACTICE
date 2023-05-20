@@ -1,0 +1,26 @@
+:root{
+  --primary-color: #f3f6f9;
+  --secondary-color: #fb7420;
+}
+
+body{
+  background: var(--primary-color);
+}
+.main{
+  padding: 10px;
+}
+
+.slds-form-element__control .slds-icon_container, .slds-form-element__control .slds-input__icon{
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--sds-c-input-color-border, #dddbda);
+  border-radius: 0px;
+  height: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  right: 0;
+  background-color: var(--primary-color);
+}

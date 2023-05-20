@@ -1,0 +1,1 @@
+exports.myTime=()=>new Date();

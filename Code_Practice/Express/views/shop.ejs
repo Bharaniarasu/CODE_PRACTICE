@@ -1,0 +1,10 @@
+<%-include('ejsLayouts/header.ejs')%>
+<main>
+  <h1>Products</h1>
+  <p>Product List....</p>
+  <% if(list.length>0){%> <% list.forEach((item)=>{ %>
+  <li><%= item %></li>
+  <% })%> <% } else{%>
+  <p>No lists available</p>
+  <% }%>
+</main>

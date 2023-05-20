@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <h3 id="header"></h3>
+    <canvas id="myChart"></canvas>
+
+    <img src="" alr="image" id="nature" width="700" />
+    <script>
+      fetch("https://wheretheiss.at")
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      console.log("API Practice......");
+
+      const getResponse = async () => {
+        const response = await fetch("nature.jpg");
+        const blob = await response.blob();
+        document.getElementById("nature").src = URL.createObjectURL(blob);
+      };
+
+      //   getResponse()
+      //     .then((res) => {
+      //       console.log("Fetched........");
+      //     })
+      //     .catch((err) => {
+      //       console.log(err);
+      //     });
+      const getText = async () => {
+        const response = await fetch("./text.txt");
+        const text = response.text();
+        return text;
+      };
+      // getText().then((res) => {
+      //   console.log(res);
+      //   document.getElementById("header").innerHTML = res;
+      // });
+
+      const images = ["./nature.jpg", "./nature (1).jpg"];
+
+      const getImgArray = async (images) => {
+        for (image of images) {
+          const response = await fetch(image);
+          const blob = await response.blob();
+          const img = URL.createObjectURL(blob);
+          const image1 = document.createElement("img");
+          console.log(image1);
+          image1.src = img;
+          image1.width = "700";
+          //   document.getElementById("nature").src
+          document.body.append(image1);
+        }
+      };
+      // getImgArray(images)
+      //   .then((res) => console.log("Array fetched"))
+      //   .catch((err) => console.log(err));
+
+      const xLabel = [];
+      const yData = [];
+
+      const readCSV = async () => {
+        const response = await fetch("zone_data.csv");
+        const csvData = await response.text();
+        const table = csvData.trim().split("\n").splice(1);
+        table.forEach((item) => {
+          const columns = item.split(",");
+          const year = columns[0];
+          xLabel.push(year);
+          const temp = columns[1];
+          yData.push(+temp + 14);
+          console.log(year, temp);
+        });
+      };
+
+      const createChart = async () => {
+        await readCSV();
+
+        const ctx = document.getElementById("myChart");
+
+        const myChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            op: console.log(xLabel),
+            labels: xLabel,
+            datasets: [
+              {
+                label: "World Temperature in c°",
+                data: yData,
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                ticks: {
+                  callback: (value, index, values) => {
+                    return value + "°";
+                  },
+                },
+                beginAtZero: false,
+              },
+            },
+          },
+        });
+      };
+      createChart();
+    </script>
+  </body>
+</html>

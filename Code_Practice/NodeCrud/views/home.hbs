@@ -1,0 +1,54 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h2>Node CRUD Application</h2>
+      {{#if update_id}}
+        <h3>Update Data</h3>
+        <form method="POST" action="/submit-data/{{update_id}}">
+          <label>UserName</label><input
+            type="text"
+            name="userName"
+            value="{{update_data.user}}"
+          />
+          <label>password</label><input
+            type="password"
+            name="password"
+            value="{{update_data.password}}"
+          />
+          <input type="submit" />
+        </form>
+      {{else}}
+        <h3>Create Data</h3>
+        <form method="POST" action="/submit-data">
+          <label>UserName</label><input type="text" name="userName" />
+          <label>password</label><input type="password" name="password" />
+          <input type="submit" />
+        </form>
+      {{/if}}
+
+      {{message}}
+      <br />
+      <h3>Details from DB</h3>
+      <ul>
+        {{#each data}}<li>{{this.user}}
+            -
+            {{this.password}}
+            --
+            <button><a href="/?update_id={{this._id}}">Edit</a></button>
+              <button><a
+                  href="/?delete_id={{this._id}}"
+                  onClick="return confirm('Do you want to delete?')"
+                >Delete</a></button>
+
+          </li>
+        {{/each}}
+      </ul>
+    </main>
+  </body>
+</html>

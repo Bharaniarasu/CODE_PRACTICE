@@ -1,0 +1,22 @@
+.button-group{
+  display: flex;
+  button{
+    flex: 1;
+    &.slds-button_outline-brand{
+      color: var(--secondary-color);
+      border-color: var(--secondary-color);
+    }
+  }
+}
+
+.task-list{
+border-top: 1px solid #dddbda;
+margin-top:20px;
+padding-top: 20px;
+table{
+  border: 1px solid #dddbda;
+  th,td{
+    padding: .45rem .5rem;
+  }
+}
+}
